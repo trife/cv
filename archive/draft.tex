@@ -1,0 +1,113 @@
+
+  \cventry
+    {Immersive study abroad program focused on social and environmental impacts of development} % Degree
+    {} % Institution
+    {Nairobi, Kenya} % Location
+    {Aug. 2014 - Dec. 2014} % Date(s)
+    
+    
+    
+% Define an environment for cvbib
+\newenvironment{cvbib}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+
+\cventry{Conference talks}
+{
+\begin{cvitems} % Description(s)
+    \item \bibentry{hershberger_pag_2020}
+    \item \bibentry{hershberger_ksu_2019}
+\end{cvitems}
+}
+
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Presentations}
+
+\begin{cventries}
+%-------------------------------------------------------------------------------
+%	CONFERENCE Presentations
+%-------------------------------------------------------------------------------
+  \cvbib
+    {Conference talks} % Title
+    {
+      \begin{cvitems} % Description(s)
+        \item \bibentry{hershberger_pag_2020}
+        \item \bibentry{hershberger_ksu_2019}
+      \end{cvitems}
+    }
+
+%-------------------------------------------------------------------------------
+%	CONFERENCE Posters
+%-------------------------------------------------------------------------------
+  \cvbib
+    {Conference posters} % Title
+    {
+      \begin{cvitems} % Description(s)
+        \item \bibentry{hershberger_pag_2020}
+        \item \bibentry{hershberger_napb_2018}
+      \end{cvitems}
+    }
+
+%-------------------------------------------------------------------------------
+%	LECTURES
+%-------------------------------------------------------------------------------
+  \cvbib
+    {Lectures} % Title
+    {
+      \begin{cvitems} % Description(s)
+        \item \bibentry{hershberger_4030_2019}
+        \item \bibentry{hershberger_4060_2019}
+        \item \bibentry{hershberger_4100_2019}
+        \item \bibentry{hershberger_4000_2019}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+
+
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+
+
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+
+% Define an environment for cvskill
+\newenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+  \begin{center}
+    \setlength\tabcolsep{1ex}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+% Define a line of cv information(skill)
+% Usage: \cvskill{<type>}{<skillset>}
+\newcommand*{\cvskill}[2]{%
+	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+}
