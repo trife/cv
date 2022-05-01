@@ -35,3 +35,9 @@ jobs:
         with:
           tag_name: ${{ steps.tag.outputs.release_tag }}
           files: cv.pdf
+      - name: Commit updated cv
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: "output/cv.pdf"
+          commit_message: "Generate citations"
+          push_options: --force
