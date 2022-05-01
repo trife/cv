@@ -21,8 +21,6 @@ jobs:
           root_file: cv.tex
           latexmk_use_xelatex: true
           working_directory:
-          post_compile: |
-            mv cv.pdf cv-${{ steps.date.outputs.date }}.pdf
       - uses: actions/upload-artifact@v2
         with:
           name: CV
