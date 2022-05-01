@@ -28,6 +28,6 @@ jobs:
           path: cv.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
-        tag_name: ${{ steps.tag.outputs.release_tag }}
         with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
           files: cv.pdf
