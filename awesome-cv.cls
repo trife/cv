@@ -685,6 +685,12 @@
   %\vspace{1mm}
 }
 
+% Define an entry of cv information
+% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\cvsummarytext}[1]{%
+  \workshopdatestyle{#1} \\
+}
+
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
   \vspace{\acvSectionContentTopSkip}
