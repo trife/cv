@@ -218,7 +218,6 @@
 % For elements of grant
 \newcommand*{\grantpositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 
-
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
 \newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} #1}}
@@ -250,6 +249,10 @@
 \newcommand*{\lettertextstyle}{\fontsize{11pt}{1.4em}\bodyfontlight\upshape\color{graytext}}
 \newcommand*{\letternamestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\letterenclosurestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
+
+% For elements of skill
+\newcommand*{\summarytextstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\summarytextstylebold}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 
 
 %-------------------------------------------------------------------------------
@@ -687,8 +690,9 @@
 
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cvsummarytext}[1]{%
-  \workshopdatestyle{#1} \\
+\newcommand*{\cvsummarytext}[2]{%
+  \summarytextstyle{#1}
+  \summarytextstylebold{#2}
 }
 
 % Define an environment for cvhonor
