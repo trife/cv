@@ -21,7 +21,7 @@ jobs:
           root_file: cv.tex
           latexmk_use_xelatex: true
           working_directory:
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: CV
           path: cv.pdf
